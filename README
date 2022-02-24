@@ -1,0 +1,36 @@
+VELO DARIO, 323CB 
+Implementarea si organizarea serialelor a fost realizata 
+folosind structura Store in fisierul control.c. Aceasta structura contine 
+pointeri catre toate obiectele din tema. Pentru 4 categoriile (tendinte, 
+documentare, tutoriale, Top10) este folosita implementarea de liste generice 
+simplu inlantuite, definita in fisierul list.h. Pentru functionalitatea 
+currently_watching si history am folosit stiva, definita in fisierul stiva.h. 
+Pentru aceste implementari m-am bazat pe construirea listelor, coziilor si 
+stivelor din laborator cu putin modificare. 
+
+# Logica principala 
+Punctul de intrare al programului este fisierul main (). In 
+acest fisier: 
+1. Programul deschide fisierul de intrare 
+2. Redirectioneaza iesirea programului catre fisierul text de iesire 
+3. Citeste fisierul de intrare pe linie. 
+4. fiecare comanda corespunde unei functie. 
+
+In functia run_cmd fiecare comanda din tema corespunde unei functie.
+Inainte de a continua cu comanda, programul verifica argumentele pentru corectitudine:
+de exemplu, valorile trebuie sa se incadreze in interval.
+
+Pentru a organiza mai bine datele am creat niste fisiere suplimentare: 
+categorii.h - contine categoriile 
+add_seriale_cmd - Adauga serial in baza de date 
+add_season_cmd - adauga sezon 
+add_top_seriale_cmd - Adăugare serial în  Top10 
+watch_seriale_cmd - Vizionare serial 
+watch_later_cmd - Adăugare serial în watch_later 
+show_seriale_list_cmd - Afișare seriale 
+
+constants.h - constrangerile requirements.c - verifica constrangerile sa nu fie 
+depasite
+
+PUNCTAJUL RULAT PE CALCULATOR: 135/135
+
